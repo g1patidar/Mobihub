@@ -1,0 +1,132 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+.Mobile_bar{
+    display: none;
+}
+
+.First_div {
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.First_div_first {
+    width: 43%;
+}
+
+.First_div_first img {
+    width: 80px;
+    margin-top: -12px;
+    margin-left: 60px;
+
+
+}
+
+.First_div_sec {
+    display: flex;
+    width: 42%;
+
+}
+
+.First_div_sec h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.First_div_third {
+    display: flex;
+    width: 15%;
+}
+
+.First_div_third h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-left: 10px;
+
+}
+
+.First_div_third img {
+    width: 35px;
+    height: 35px;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .First_div_first,
+    .First_div_sec,
+    .First_div_third {
+        width: 100%;
+        max-width: none;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .First_div_third
+    {
+        margin-left: 25%;
+    }
+    .First_div_first img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .First_div_sec
+    {
+        display: none;
+    }
+    .First_div_first img {
+        width: 80px;
+        margin-top: -12px;
+        margin-left: -80px;
+
+    
+    
+    }
+    .First_div_third h3 {
+        font-size: 18px;
+        color: white;
+        font-weight: 400;
+        margin-top: 15px;
+    
+    }
+    
+    .First_div_third img {
+        width: 35px;
+        height: 35px;
+        margin-top: 8px;
+    
+    }
+    .First_div {
+        height: 50px;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .Mobile_bar{
+        display: flex;
+        margin-top: -10px;
+        width: 300px;
+        margin-left: -10px;
+    }
+    
+    .Mobile_bar h1{
+        font-size: 23px;
+    }
+    .Mobile_bar i{
+        font-size: 27px;
+        margin-left: 80px;
+        margin-top: 5px;
+    }
+
+    
+}

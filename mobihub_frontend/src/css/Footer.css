@@ -1,0 +1,77 @@
+
+.footer{
+    background-color: black;
+    color: white;
+}
+.footer-div{
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: 330px 270px 280px 230px 230px; */
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+.socialmedia-weblogo{
+    padding:0px 30px;
+}
+.socialmedia-weblogo img{
+    width:auto;
+    height: 100px;
+}
+.socialmedia-weblogo div{
+    width: auto;
+    color: white;
+}
+.social-media{
+    display: flex;
+
+}
+.social-media img{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+.arrow{
+    display: none;
+}
+
+
+@media (max-width:768px){
+    .socialmedia-weblogo{
+        width: 270px;
+        /* padding-left:0px ; */
+        padding: 0px;
+    }
+    .footer-div{
+        box-sizing: border-box;
+        display: block;
+        padding-top: 0px;
+    }
+    .company-divs,.information-divs, .contact-divs,.services-divs{
+        display: none;
+    }
+    .company-detail,.company-information,.company-contact,.company-services{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+    }
+    .arrow {
+        display: flex;
+     }
+    
+   
+}
+
+.arrow img{
+    width: 20px;
+    align-items: center;
+}
+.address-website,.contact-website {
+
+    padding: 0px 40px 0px 0px ;
+}
+
+.information-divs, .contact-divs,.services-divs{
+    font-size: 20px;
+}
+.company-divs div,.information-divs div, .contact-divs div , .services-divs div{
+    padding-top: 3px;
+}
