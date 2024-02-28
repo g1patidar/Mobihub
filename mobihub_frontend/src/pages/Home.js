@@ -15,7 +15,7 @@ const Home = () => {
 
             <section className="best_seller">
                 <div id="Best_seller_heading">
-                    <p>Best Sellerrr</p>
+                    <p>Best Sellerrrghggggg</p>
                 </div>
 
                 <div className="grid_use">
