@@ -1,77 +1,95 @@
-
-.footer{
-    background-color: black;
-    color: white;
-}
-.footer-div{
-    padding: 20px;
-    display: grid;
-    /* grid-template-columns: 330px 270px 280px 230px 230px; */
-    grid-template-columns: 20% 20% 20% 20% 20%;
-}
-.socialmedia-weblogo{
-    padding:0px 30px;
-}
-.socialmedia-weblogo img{
-    width:auto;
-    height: 100px;
-}
-.socialmedia-weblogo div{
-    width: auto;
-    color: white;
-}
-.social-media{
+.footer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #2c3e50; /* Dark blue background color */
+    color: #fff; /* Text color */
+    padding: 20px;
 
-}
-.social-media img{
-    width: 60px;
-    height: 60px;
-    padding: 10px;
-}
-.arrow{
-    display: none;
-}
-
-
-@media (max-width:768px){
-    .socialmedia-weblogo{
-        width: 270px;
-        /* padding-left:0px ; */
-        padding: 0px;
-    }
-    .footer-div{
-        box-sizing: border-box;
-        display: block;
-        padding-top: 0px;
-    }
-    .company-divs,.information-divs, .contact-divs,.services-divs{
-        display: none;
-    }
-    .company-detail,.company-information,.company-contact,.company-services{
-        display: flex;
-        justify-content: space-between;
-        padding-top: 10px;
-    }
-    .arrow {
-        display: flex;
-     }
-    
-   
-}
-
-.arrow img{
-    width: 20px;
-    align-items: center;
-}
-.address-website,.contact-website {
-
-    padding: 0px 40px 0px 0px ;
-}
-
-.information-divs, .contact-divs,.services-divs{
+  }
+  
+  .footer-section {
+    width: 20%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    color: #f0f0f0; /* Heading color */
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li a {
+    color: #ccc; /* Link color */
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff; /* Hover color */
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    color: #ccc; /* Icon color */
     font-size: 20px;
-}
-.company-divs div,.information-divs div, .contact-divs div , .services-divs div{
-    padding-top: 3px;
+  }
+  
+  .social-icons a:hover {
+    color: #fff; /* Hover color */
+  }
+  
+  .input-field {
+    width: calc(100% - 46px); /* Adjusted to accommodate the button */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #34495e; /* Dark blue input field background color */
+    color: #fff; /* Input field text color */
+  }
+  
+  .link-button {
+    background-color: #3498db; /* Light blue button background color */
+    color: #fff; /* Button text color */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .link-button:hover {
+    background-color: #2980b9; /* Darker blue button hover background color */
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    color: #ccc; /* Copyright text color */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-section {
+      width: 50%;
+    }
+  
+    .input-field {
+      width: calc(100% - 20px);
+    }
+  }
+.footer-section ul li 
+{
+    list-style-type: none;
 }
