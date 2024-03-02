@@ -1,57 +1,33 @@
 import { Link } from "react-router-dom";
+import Carousel from "./components/Carousel";
+import BestSellers from "./components/BestSellers/BestSellers";
 
 
 const Home = () => {
 
     return (
         <>
-            <div className="scoll_images">
-                <div className="images">
 
-                </div>
-            </div>
+
+
+            {/* new carousal */}
+            <Carousel/>
+
+            {/* new carousal */}
 
 
 
             <section className="best_seller">
                 <div id="Best_seller_heading">
-                    <p>Best Sellerrrghggggg</p>
+                    <p>Our Best Seller Mobiles</p>
                 </div>
+                <>
 
-                <div className="grid_use">
-                    <Link>
-                        <div className="best_mobile_box">
-                            <div>
-                                <img src="./images/i phone 13.png" alt="iphone" />
-                            </div>
-                            <p>I phone 13</p>
-                            <p> Best Offers </p>
-                        </div>
-                    </Link>
+                {/* adding new best seller */}
+                <BestSellers/>
+                </>
 
 
-                    <Link>
-                        <div className="best_mobile_box">
-                            <div>
-                                <img src="./images/Galaxy.png" alt="poco" />
-                            </div>
-                            <p>Samsung s23 ultra</p>
-                            <p> Best Offers </p>
-
-                        </div>
-                    </Link>
-
-                    <Link>
-                        <div className="best_mobile_box">
-                            <div>
-                                <img src="./images/pocoX3.png" alt="poco" />
-                            </div>
-                            <p> Poco X3  </p>
-                            <p>Best Offers </p>
-                        </div>
-                    </Link>
-
-                </div>
 
             </section>
 
@@ -65,7 +41,7 @@ const Home = () => {
 
             <section className="Shop_Brand_main">
                 <div className="shop_brand_name">
-                    <span>Shop By Brand </span>
+                    <span>Shop By Brandzzzzzzzzzzzz </span>
                 </div>
                 <div className="shop_brand_name_2">
                     <span>Realme SmartPhone</span>

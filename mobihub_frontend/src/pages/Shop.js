@@ -45,10 +45,12 @@ const Shop = () => {
 
   return (
     <>
+    <h1>hi</h1>
       <div className='main_product_card'>
         {/* {allproduct} */}
         {allproduct}
       </div>
+
 
 
       {/* <div className='banner'>

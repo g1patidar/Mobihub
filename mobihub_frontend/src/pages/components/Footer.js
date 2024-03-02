@@ -1,84 +1,59 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import "../../css/Footer.css";
 
 const Footer = () => {
-
-    return (
-        <>
-            <div className="footer">
-                <div className="footer-div">
-                    <div className="socialmedia-weblogo">
-                        <img src="./images/main_logo.png" />
-                        <div>Super class, cute, comfortable. Youcan wear them with just aboutanything.</div>
-                        <br />
-                        <div className="social-media">
-                            <div className="social-media-insta">
-                                <Link><img src="./images/insta-logo.png" /></Link>
-                            </div>
-                            <div className="social-media-facebook">
-                                <Link><img src="./images/facebook-logo.png" /></Link>
-                            </div>
-                            <div className="social-media-linkedin">
-                                <Link><img src="./images/linkedin-logo.png" /></Link>
-                            </div>
-                            <div className="social-media-twitter">
-                                <Link><img src="./images/twitter-logo.png" /></Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="company-detail">
-                        <h2>Company</h2>
-                        <br/>
-                        <div className="company-divs">
-                            <br />
-                            <br />
-                            <div className="address-website">184 Main Rd E, St AlbansVIC 3021, Australia</div>
-                            <br />
-                            <div className="contact-website">
-                                +84 (0)387 392 056 hello@domain.com
-                            </div>
-                           
-                        </div>
-                        <div className="arrow"><img src="./images/down-arrow.png"/></div>
-                    </div>
-                   
-                    <div className="company-information">
-                        <h2>Information</h2>
-                        <br/>
-                        <div className="information-divs">
-                            <div>Register</div>
-                            <div>Login</div>
-                            <div>Mycart</div>
-                            <div>Wishlist</div>
-                            <div>Product Compare</div>
-                        </div>
-                        <div className="arrow"><img src="./images/down-arrow.png"/></div>
-                    </div>
-                    <div className="company-contact">
-                        <h2>Contact</h2>
-                        <br/>
-                        <div className="contact-divs">
-                            <div>About us</div>
-                            <div>Contact us</div>
-                            <div>FAQs</div>
-                            <div>Blog</div>
-                        </div>
-                        <div className="arrow"><img src="./images/down-arrow.png"/></div>
-                    </div>
-                    <div className="company-services">
-                        <h2>Services</h2>
-                        <br/>
-                        <div className="services-divs">
-                            <div>Privicy Policy</div>
-                            <div>Refund Policy</div>
-                            <div>Shipping & Return</div>
-                            <div>Terms Condition</div>
-                        </div>
-                        <div className="arrow"><img src="./images/down-arrow.png"/></div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
+  return (
+    <div className="footer"> 
+      <div className="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><Link to="/category1">Category 1</Link></li>
+          <li><Link to="/category2">Category 2</Link></li>
+          <li><Link to="/category3">Category 3</Link></li>
+          <li><Link to="/category4">Category 4</Link></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>Information</h3>
+        <ul>
+          <li><Link to="/about">About Us</Link></li>
+          <li><Link to="/contact">Contact Us</Link></li>
+          <li><Link to="/privacy">Privacy Policy</Link></li>
+          <li><Link to="/terms">Terms & Conditions</Link></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><Link to="/faq">FAQs</Link></li>
+          <li><Link to="/shipping">Shipping Information</Link></li>
+          <li><Link to="/returns">Returns & Exchanges</Link></li>
+          <li><Link to="/track">Track Your Order</Link></li>
+        </ul>
+      </div>
+      <div className="footer-section">
+        <h3>Newsletter</h3>
+        <p>Subscribe to our newsletter for updates</p>
+        <form>
+          <input type="email" placeholder="Your Email" className="input-field" />
+          <Link to="#" className="link-button">Subscribe</Link>
+        </form>
+      </div>
+      <div className="footer-section">
+        <h3>Follow Us</h3>
+        <div className="social-icons">
+          <a href="https://facebook.com"><FaFacebook /></a>
+          <a href="https://twitter.com"><FaTwitter /></a>
+          <a href="https://instagram.com"><FaInstagram /></a>
+        </div>
+      </div>
+      <div className="copyright">
+        &copy; 2024 Your Ecommerce Website. All rights reserved.
+      </div>
+    </div>
+  );
 }
 
 export default Footer;
