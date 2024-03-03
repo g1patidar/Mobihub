@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcrypt");
 
+
 // Declare the Schema of the Mongo model
 const userSchema = new mongoose.Schema({
     Name: {
@@ -14,7 +15,7 @@ const userSchema = new mongoose.Schema({
     },
     Email: {
         type: String,
-        required: true
+        required: true,
 
     },
     Password: {
@@ -30,14 +31,13 @@ const userSchema = new mongoose.Schema({
     Role: {
         type: String,
         default: "user"
-    },
+    }  
 });
 
 userSchema.pre("save", async function (next) {
-    const salt = bcrypt.genSaltSync(10);
+    const salt = await bcrypt.genSaltSync(10);
     this.Password = await bcrypt.hash(this.Password, salt);
-
-});
+  });
 
 userSchema.methods.isPasswordMatched = async function (enterdpassword) {
     return await bcrypt.compare(enterdpassword, this.Password);

@@ -1,7 +1,10 @@
 const jwt = require ("jsonwebtoken");
 
-const Tokengenreter = (id)=>
+const Tokengenreter = (id,Name,Email)=>
 {
-    return jwt.sign({id}, process.env.JWT_SECRET, {expiresIn: "3d"});
+    const token = jwt.sign({id,Name,Email}, process.env.JWT_SECRET, {expiresIn: 3143535});
+    return token;
 }
-module.exports = {Tokengenreter}
+module.exports = {Tokengenreter} 
+
+
