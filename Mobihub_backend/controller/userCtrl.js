@@ -13,7 +13,8 @@ const createUser = asyncHandler(
             console.log(newuser)
         }
         else {
-            throw new Error("User Alraddy exixst");
+            // throw new Error("User Alraddy exixst");
+            res.send("already exist")
         }
     });
 
@@ -23,20 +24,27 @@ const loginUserCtrl = asyncHandler(
         //console.log(Email, Password);
 
         const finduser = await User.findOne({ Email });
+        // res.send(finduser);
+        // console.log(finduser)
         if (finduser && (await finduser.isPasswordMatched(Password))) {
+            //  res.json(finduser);
             res.json({
                 _id: finduser?._id,
                 Name: finduser?.Name,
                 LastName: finduser?.LastName,
                 Email: finduser?.Email,
-                Password: finduser?.Password,
                 Address: finduser?.Address,
-                token: Tokengenreter(finduser?._id),
+                token: Tokengenreter(
 
+                    finduser?.id,
+                    finduser?.Name,
+                    finduser?.Email
+                )
             });
+
         }
         else {
-            throw new Error("Invalid Cerdetials");
+            throw new Error("Invalid Credentials");
         }
     });
 
@@ -100,22 +108,17 @@ const getauserupdated = asyncHandler(
         }
     });
 
-   const ManageAddress = (req, res)=>{
-        const mymanageaddress = new Managedryaddress(req.body);
-        console.log(mymanageaddress);
-        mymanageaddress.save();
+const ManageAddress = (req, res) => {
+    const mymanageaddress = new Managedryaddress(req.body);
+    console.log(mymanageaddress);
+    mymanageaddress.save();
 
-        res.send("data seccufull seva");
-      }
-
-
-
-
-
+    res.send("data seccufull seva");
+}
 
 
 module.exports = {
 
-    createUser, loginUserCtrl, getalluser, getauser, getauserdelete, getauserupdated,ManageAddress
-       
+    createUser, loginUserCtrl, getalluser, getauser, getauserdelete, getauserupdated, ManageAddress
+
 };

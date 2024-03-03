@@ -10,10 +10,15 @@ const ProductAdd =  (req, res) =>
         // console.log(myproduct);
     }
 
-    const DisplayProduct = (req, res)=>
-    {
-        const mydatadisplay = AdminModel.find().then((data)=>res.json(data));
-        console.log(mydatadisplay);
-    }
+    const DisplayProduct = async (req, res) => {
+        try {
+            const products = await AdminModel.find();
+            res.json(products);
+            console.log(products)
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+    
 
     module.exports = { ProductAdd, DisplayProduct };
