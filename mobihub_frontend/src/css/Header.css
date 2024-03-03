@@ -43,9 +43,7 @@
     transition: .5s;
 }
 
-.header:hover::after {
-    left: 100%;
-}
+
 
 .logo {
     font-size: 2rem;

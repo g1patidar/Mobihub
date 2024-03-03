@@ -1,13 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; 
 import { FaBars, FaTimes, FaShoppingCart } from 'react-icons/fa'; 
 import { GiCentaurHeart } from "react-icons/gi";
 import "../../css/Header.css";
 
-
 const Header = () => {
     return (
         <header className="header">
-            <a href="/" className="logo"> <img src="./images/main_logo.png"  alt='/' />  </a>
+            <Link to="/" className="logo"> <img src="./images/main_logo.png" alt='/' />  </Link> 
 
             <input type="checkbox" id="check" />
 
@@ -17,15 +17,15 @@ const Header = () => {
             </label>
 
             <nav className="navbar">
-                <a href="/" style={{'--i': 0}}>Home</a>
-                <a href="/" style={{'--i': 1}}>About</a>
-                <a href="/shop" style={{'--i': 2}}>Shop</a>
-                <a href="/" style={{'--i': 3}}>Services</a>
-                <a href="/" style={{'--i': 4}}>Contact</a>
+                <Link to="/" style={{'--i': 0}}>Home</Link> 
+                <Link to="/" style={{'--i': 1}}>About</Link> 
+                <Link to="/shop" style={{'--i': 2}}>Shop</Link> 
+                <Link to="/" style={{'--i': 3}}>Services</Link> 
+                <Link to="/" style={{'--i': 4}}>Contact</Link> 
 
-                <a href="/cartpage" style={{'--i': 5}}><FaShoppingCart className="cart-icon" /> </a>
-                <a href="/" style={{'--i': 6}}><GiCentaurHeart className="cart-icon" /> </a>
-                <a href="/" style={{'--i': 7}} ><button className="login-button">Login</button> </a>
+                <Link to="/cartpage" style={{'--i': 5}}><FaShoppingCart className="cart-icon" /></Link> 
+                <Link to="/" style={{'--i': 6}}><GiCentaurHeart className="cart-icon" /></Link> 
+                <Link to="/loginpage" style={{'--i': 7}}><button className="login-button">Login</button></Link> 
             </nav>
         </header>
     );
